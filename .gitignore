@@ -132,9 +132,10 @@ dmypy.json
 .idea/workspace.xml
 
 #Data inside the recognizer
-.data_haarcascade
-.data_haarcascade
+data_haarcascade/
 
 #Others
 aux_methods.py
+prueba1.py
 pruebas.py
+hsv_color_code_utility.py
