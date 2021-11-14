@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Workspace settings
+.idea/workspace.xml
+
+#Data inside the recognizer
+.data_haarcascade
+.data_haarcascade
+
+#Others
+aux_methods.py
+pruebas.py
