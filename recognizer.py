@@ -1,7 +1,5 @@
 import numpy as np
 import cv2
-import aux_methods
-import imutils
 import os
 """
 Script de reconocimiento de imagen e identificación acorde con el entrenamiento del HaarCascade
@@ -21,7 +19,7 @@ while True:
         break
     custom_cascade = cv2.CascadeClassifier('data_haarcascade/classifier/cascade.xml')
     gray_image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY) #Hacemos esto porque el clasificador necesita imagenes en blanco y negro
-    faces = custom_cascade.detectMultiScale(gray_image, 9, 125, minSize=(70,78)) #1.3 es el scaling de la imagen con respecto a las imagenes con las que se entrenó el modelo, 5 es el minNeighbours (afecta a la calidad y al numero de detecciones)
+    faces = custom_cascade.detectMultiScale(gray_image, 9, 150, minSize=(70,78)) #1.3 es el scaling de la imagen con respecto a las imagenes con las que se entrenó el modelo, 5 es el minNeighbours (afecta a la calidad y al numero de detecciones)
 
 
     for(x,y,w,h) in faces: #detectMultiScale devuelve un rectángulo. x,y son las coordenadas de la esquina superior izquierda, (x+w),(y+h) hacen la esquina inferior derecha pq en open cv el eje y va en positivo hacia abajo

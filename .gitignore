@@ -133,6 +133,7 @@ dmypy.json
 
 #Data inside the recognizer
 data_haarcascade/
+data_haarcascade/classifier/
 
 #Others
 aux_methods.py

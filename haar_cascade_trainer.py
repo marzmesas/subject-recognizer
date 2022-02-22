@@ -1,8 +1,7 @@
 import numpy as np
 import cv2
-import aux_methods
-import imutils
 import os
+import imutils
 """
 Script de reconocimiento de imagen e identificación acorde con el entrenamiento del HaarCascade
 """
