@@ -1,4 +1,3 @@
-import numpy as np
 import cv2
 import os
 import imutils
@@ -33,14 +32,14 @@ while True:
     cv2.rectangle(frame,(x1,y1),(x2,y2), (255,102,34), 2)
     cap_face = im_aux[y1:y2, x1:x2]
     cap_face = imutils.resize(cap_face, width=24)
-    k = cv2.waitKey(1) #Se declara una variable con el resultado de llamar a WaitKey porque mejora sustancialmente el tiempo de ejecución, si no, no se puede ejecutar el if del guardado tan rápido como quiera el usuario hacer click
+    k = cv2.waitKey(1) 
     if k == ord('q'):
         break
-    if k == ord('s'):
+    if k == ord('s'): ##Press S for capturing a positive image
         cv2.imwrite(data_pos+'/objeto_{}.jpg'.format(count),cap_face)
         print('Saved image: ','objeto_{}.jpg'.format(count))
         count= count +1
-    if k == ord('n'):
+    if k == ord('n'): ##Press N to capture a negative image
         cv2.imwrite(data_neg+'/objeto_neg_{}.jpg'.format(count_neg),cap_face)
         print('Saved image: ','objeto_neg_{}.jpg'.format(count_neg))
         count_neg = count_neg +1
