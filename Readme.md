@@ -1,0 +1,1 @@
+This is a custom Haar-Cascade based person detector
